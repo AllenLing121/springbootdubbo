@@ -1,0 +1,17 @@
+server:
+  port: 8088
+
+#ali dubbo 需要加这个配置
+#spring:
+#  main:
+#   allow-bean-definition-overriding: true
+dubbo:
+  application:
+    name: provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.ling.service.impl
